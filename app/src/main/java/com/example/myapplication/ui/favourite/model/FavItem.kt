@@ -1,6 +1,6 @@
 package com.example.myapplication.ui.favourite.model
 
-data class fav_item(
+data class FavItem(
     val name: String,
     val size: Int,
     val price: Int,
