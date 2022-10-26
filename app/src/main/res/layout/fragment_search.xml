@@ -5,9 +5,11 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/light_blue"
     tools:context=".ui.search.SearchFragment">
 
-<!--title-->
+
+    <!--title-->
     <TextView
         android:id="@+id/searchTitle"
         android:layout_width="wrap_content"
@@ -15,13 +17,15 @@
         android:layout_marginTop="15dp"
         android:fontFamily="@font/maven_pro"
         android:text="@string/title_search"
+        android:textColor="@color/dark_blue"
         android:textSize="32sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.073"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    
+
     <!--    search-->
     <SearchView
         android:id="@+id/searchView"
@@ -60,9 +64,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="For Her"
-            tools:ignore="HardcodedText"
-            tools:layout_editor_absoluteX="142dp"
-            tools:layout_editor_absoluteY="167dp" />
+            tools:ignore="HardcodedText" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/forKids"
