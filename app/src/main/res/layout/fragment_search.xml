@@ -8,11 +8,11 @@
     tools:context=".ui.search.SearchFragment">
 
 <!--title-->
-    <TextView
+    <androidx.appcompat.widget.AppCompatCheckedTextView
         android:id="@+id/searchTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="30dp"
         android:fontFamily="@font/maven_pro"
         android:text="@string/title_search"
         android:textSize="32sp"
@@ -21,9 +21,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
+    
     <!--    search-->
-    <SearchView
+    <androidx.appcompat.widget.SearchView
         android:id="@+id/searchView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -41,37 +41,22 @@
     <!--    tabs-->
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
-        android:layout_width="409dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchView">
+        app:layout_constraintTop_toBottomOf="@+id/searchView" />
 
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/forHim"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="For Him"
-            tools:ignore="HardcodedText" />
-
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/forHer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="For Her"
-            tools:ignore="HardcodedText"
-            tools:layout_editor_absoluteX="142dp"
-            tools:layout_editor_absoluteY="167dp" />
-
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/forKids"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="For Kids"
-            tools:ignore="HardcodedText" />
-
-    </com.google.android.material.tabs.TabLayout>
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
